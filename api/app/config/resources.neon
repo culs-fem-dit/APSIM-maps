@@ -1,0 +1,14 @@
+extensions:
+    resource: Contributte\DI\Extension\ResourceExtension
+
+resource:
+    resources:
+        App\Controllers\:
+            paths: [%appDir%/Controllers]
+            decorator:
+                inject: true
+        App\Model\:
+            paths: [%appDir%/Model]
+            decorator:
+                inject: true
+

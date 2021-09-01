@@ -1,0 +1,3 @@
+extensions:
+    tracy.bluescreens: Contributte\Tracy\DI\TracyBlueScreensExtension
+

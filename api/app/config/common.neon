@@ -1,0 +1,13 @@
+extensions:
+    api: Apitte\Core\DI\ApiExtension
+
+api:
+    catchException: true
+    debug: %debugMode%
+    plugins:
+        Apitte\Core\DI\Plugin\CoreDecoratorPlugin:
+        Apitte\Core\DI\Plugin\CoreMappingPlugin:
+        Apitte\Debug\DI\DebugPlugin:
+        Apitte\Middlewares\DI\MiddlewaresPlugin:
+        Apitte\Negotiation\DI\NegotiationPlugin:
+            unification: on
