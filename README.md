@@ -31,4 +31,4 @@ Add `local.neon` including insert DB settings.\
 Database dump is located in `DB_dump.sql`. Run or import the file in your database.
 
 ---
-Created by [Department lsf Information Technologies](https://kit.pef.czu.cz/?do=ChangeToEnglish), CZU Prague 
+Created by [Department of Information Technologies](https://kit.pef.czu.cz/?do=ChangeToEnglish), CZU Prague 
