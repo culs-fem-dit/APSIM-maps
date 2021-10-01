@@ -2,10 +2,10 @@
 -- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Počítač: localhost:3306
--- Vytvořeno: Pát 27. srp 2021, 19:51
--- Verze serveru: 10.3.30-MariaDB-cll-lve
--- Verze PHP: 7.3.28
+-- Host: localhost:3306
+-- Generation Time: Oct 01, 2021 at 08:50 AM
+-- Server version: 10.3.31-MariaDB-cll-lve
+-- PHP Version: 7.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,19 +19,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Databáze: `ls40pefczu_maps`
+-- Database: `ls40pefczu_maps`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `map`
+-- Table structure for table `map`
 --
 
 CREATE TABLE `map` (
   `id` int(11) NOT NULL,
   `soil` int(11) NOT NULL,
-  `scenario` enum('production','resilience') NOT NULL,
+  `scenario` enum('production','stability') NOT NULL,
   `label` varchar(100) NOT NULL,
   `variable` varchar(100) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
@@ -42,105 +42,105 @@ CREATE TABLE `map` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Vypisuji data pro tabulku `map`
+-- Dumping data for table `map`
 --
 
 INSERT INTO `map` (`id`, `soil`, `scenario`, `label`, `variable`, `name`, `type`, `criteria`, `is_shown`, `units`) VALUES
 (1, 1, 'production', 'max_yield', 'max_yield', 'solapur94-prod-max_yield', 'continuous', 'max', 0, 'kg/ha'),
 (2, 2, 'production', 'max_yield', 'max_yield', 'solapur132-prod-max_yield', 'continuous', 'max', 0, 'kg/ha'),
 (3, 3, 'production', 'max_yield', 'max_yield', 'luvisol144-prod-max_yield', 'continuous', 'max', 0, 'kg/ha'),
-(4, 1, 'resilience', 'max_yield', 'max_yield', 'solapur94-res-max_yield', 'continuous', 'max', 0, 'kg/ha'),
-(5, 2, 'resilience', 'max_yield', 'max_yield', 'solapur132-res-max_yield', 'continuous', 'max', 0, 'kg/ha'),
-(6, 3, 'resilience', 'max_yield', 'max_yield', 'luvisol144-res-max_yield', 'continuous', 'max', 0, 'kg/ha'),
+(4, 1, 'stability', 'max_yield', 'max_yield', 'solapur94-res-max_yield', 'continuous', 'max', 0, 'kg/ha'),
+(5, 2, 'stability', 'max_yield', 'max_yield', 'solapur132-res-max_yield', 'continuous', 'max', 0, 'kg/ha'),
+(6, 3, 'stability', 'max_yield', 'max_yield', 'luvisol144-res-max_yield', 'continuous', 'max', 0, 'kg/ha'),
 (7, 1, 'production', 'average_yield', 'average_yield', 'solapur94-prod-average_yield', 'continuous', 'max', 1, 'kg/ha'),
 (8, 2, 'production', 'average_yield', 'average_yield', 'solapur132-prod-average_yield', 'continuous', 'max', 1, 'kg/ha'),
 (9, 3, 'production', 'average_yield', 'average_yield', 'luvisol144-prod-average_yield', 'continuous', 'max', 1, 'kg/ha'),
-(10, 1, 'resilience', 'average_yield', 'average_yield', 'solapur94-res-average_yield', 'continuous', 'max', 1, 'kg/ha'),
-(11, 2, 'resilience', 'average_yield', 'average_yield', 'solapur132-res-average_yield', 'continuous', 'max', 1, 'kg/ha'),
-(12, 3, 'resilience', 'average_yield', 'average_yield', 'luvisol144-res-average_yield', 'continuous', 'max', 1, 'kg/ha'),
+(10, 1, 'stability', 'average_yield', 'average_yield', 'solapur94-res-average_yield', 'continuous', 'max', 1, 'kg/ha'),
+(11, 2, 'stability', 'average_yield', 'average_yield', 'solapur132-res-average_yield', 'continuous', 'max', 1, 'kg/ha'),
+(12, 3, 'stability', 'average_yield', 'average_yield', 'luvisol144-res-average_yield', 'continuous', 'max', 1, 'kg/ha'),
 (13, 1, 'production', 'max_stover', 'max_stover', 'solapur94-prod-max_stover', 'continuous', 'max', 0, 'kg/ha'),
 (14, 2, 'production', 'max_stover', 'max_stover', 'solapur132-prod-max_stover', 'continuous', 'max', 0, 'kg/ha'),
 (15, 3, 'production', 'max_stover', 'max_stover', 'luvisol144-prod-max_stover', 'continuous', 'max', 0, 'kg/ha'),
-(16, 1, 'resilience', 'max_stover', 'max_stover', 'solapur94-res-max_stover', 'continuous', 'max', 0, 'kg/ha'),
-(17, 2, 'resilience', 'max_stover', 'max_stover', 'solapur132-res-max_stover', 'continuous', 'max', 0, 'kg/ha'),
-(18, 3, 'resilience', 'max_stover', 'max_stover', 'luvisol144-res-max_stover', 'continuous', 'max', 0, 'kg/ha'),
+(16, 1, 'stability', 'max_stover', 'max_stover', 'solapur94-res-max_stover', 'continuous', 'max', 0, 'kg/ha'),
+(17, 2, 'stability', 'max_stover', 'max_stover', 'solapur132-res-max_stover', 'continuous', 'max', 0, 'kg/ha'),
+(18, 3, 'stability', 'max_stover', 'max_stover', 'luvisol144-res-max_stover', 'continuous', 'max', 0, 'kg/ha'),
 (19, 1, 'production', 'average_stover', 'average_stover', 'solapur94-prod-average_stover', 'continuous', 'max', 1, 'kg/ha'),
 (20, 2, 'production', 'average_stover', 'average_stover', 'solapur132-prod-average_stover', 'continuous', 'max', 1, 'kg/ha'),
 (21, 3, 'production', 'average_stover', 'average_stover', 'luvisol144-prod-average_stover', 'continuous', 'max', 1, 'kg/ha'),
-(22, 1, 'resilience', 'average_stover', 'average_stover', 'solapur94-res-average_stover', 'continuous', 'max', 1, 'kg/ha'),
-(23, 2, 'resilience', 'average_stover', 'average_stover', 'solapur132-res-average_stover', 'continuous', 'max', 1, 'kg/ha'),
-(24, 3, 'resilience', 'average_stover', 'average_stover', 'luvisol144-res-average_stover', 'continuous', 'max', 1, 'kg/ha'),
+(22, 1, 'stability', 'average_stover', 'average_stover', 'solapur94-res-average_stover', 'continuous', 'max', 1, 'kg/ha'),
+(23, 2, 'stability', 'average_stover', 'average_stover', 'solapur132-res-average_stover', 'continuous', 'max', 1, 'kg/ha'),
+(24, 3, 'stability', 'average_stover', 'average_stover', 'luvisol144-res-average_stover', 'continuous', 'max', 1, 'kg/ha'),
 (25, 1, 'production', 'biomass_deviation', 'biomass_deviation', 'solapur94-prod-biomass_deviation', 'continuous', 'min', 0, '%'),
 (26, 2, 'production', 'biomass_deviation', 'biomass_deviation', 'solapur132-prod-biomass_deviation', 'continuous', 'min', 0, '%'),
 (27, 3, 'production', 'biomass_deviation', 'biomass_deviation', 'luvisol144-prod-biomass_deviation', 'continuous', 'min', 0, '%'),
-(28, 1, 'resilience', 'biomass_deviation', 'biomass_deviation', 'solapur94-res-biomass_deviation', 'continuous', 'min', 0, '%'),
-(29, 2, 'resilience', 'biomass_deviation', 'biomass_deviation', 'solapur132-res-biomass_deviation', 'continuous', 'min', 0, '%'),
-(30, 3, 'resilience', 'biomass_deviation', 'biomass_deviation', 'luvisol144-res-biomass_deviation', 'continuous', 'min', 0, '%'),
+(28, 1, 'stability', 'biomass_deviation', 'biomass_deviation', 'solapur94-res-biomass_deviation', 'continuous', 'min', 0, '%'),
+(29, 2, 'stability', 'biomass_deviation', 'biomass_deviation', 'solapur132-res-biomass_deviation', 'continuous', 'min', 0, '%'),
+(30, 3, 'stability', 'biomass_deviation', 'biomass_deviation', 'luvisol144-res-biomass_deviation', 'continuous', 'min', 0, '%'),
 (31, 1, 'production', 'endjuv_mode', 'endjuv_mode', 'solapur94-prod-endjuv_mode', 'discrete', 'neither', 0, ''),
 (32, 2, 'production', 'endjuv_mode', 'endjuv_mode', 'solapur132-prod-endjuv_mode', 'discrete', 'neither', 0, ''),
 (33, 3, 'production', 'endjuv_mode', 'endjuv_mode', 'luvisol144-prod-endjuv_mode', 'discrete', 'neither', 0, ''),
-(34, 1, 'resilience', 'endjuv_mode', 'endjuv_mode', 'solapur94-res-endjuv_mode', 'discrete', 'neither', 0, ''),
-(35, 2, 'resilience', 'endjuv_mode', 'endjuv_mode', 'solapur132-res-endjuv_mode', 'discrete', 'neither', 0, ''),
-(36, 3, 'resilience', 'endjuv_mode', 'endjuv_mode', 'luvisol144-res-endjuv_mode', 'discrete', 'neither', 0, ''),
+(34, 1, 'stability', 'endjuv_mode', 'endjuv_mode', 'solapur94-res-endjuv_mode', 'discrete', 'neither', 0, ''),
+(35, 2, 'stability', 'endjuv_mode', 'endjuv_mode', 'solapur132-res-endjuv_mode', 'discrete', 'neither', 0, ''),
+(36, 3, 'stability', 'endjuv_mode', 'endjuv_mode', 'luvisol144-res-endjuv_mode', 'discrete', 'neither', 0, ''),
 (37, 1, 'production', 'urea_mode', 'urea_mode', 'solapur94-prod-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
 (38, 2, 'production', 'urea_mode', 'urea_mode', 'solapur132-prod-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
 (39, 3, 'production', 'urea_mode', 'urea_mode', 'luvisol144-prod-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
-(40, 1, 'resilience', 'urea_mode', 'urea_mode', 'solapur94-res-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
-(41, 2, 'resilience', 'urea_mode', 'urea_mode', 'solapur132-res-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
-(42, 3, 'resilience', 'urea_mode', 'urea_mode', 'luvisol144-res-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
+(40, 1, 'stability', 'urea_mode', 'urea_mode', 'solapur94-res-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
+(41, 2, 'stability', 'urea_mode', 'urea_mode', 'solapur132-res-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
+(42, 3, 'stability', 'urea_mode', 'urea_mode', 'luvisol144-res-urea_mode', 'discrete', 'neither', 0, 'kg/ha'),
 (43, 1, 'production', 'density_mode', 'density_mode', 'solapur94-prod-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
 (44, 2, 'production', 'density_mode', 'density_mode', 'solapur132-prod-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
 (45, 3, 'production', 'density_mode', 'density_mode', 'luvisol144-prod-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
-(46, 1, 'resilience', 'density_mode', 'density_mode', 'solapur94-res-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
-(47, 2, 'resilience', 'density_mode', 'density_mode', 'solapur132-res-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
-(48, 3, 'resilience', 'density_mode', 'density_mode', 'luvisol144-res-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
+(46, 1, 'stability', 'density_mode', 'density_mode', 'solapur94-res-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
+(47, 2, 'stability', 'density_mode', 'density_mode', 'solapur132-res-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
+(48, 3, 'stability', 'density_mode', 'density_mode', 'luvisol144-res-density_mode', 'discrete', 'neither', 0, 'plants/m^2'),
 (49, 1, 'production', 'canopy_mode', 'canopy_mode', 'solapur94-prod-canopy_mode', 'discrete', 'neither', 0, ''),
 (50, 2, 'production', 'canopy_mode', 'canopy_mode', 'solapur132-prod-canopy_mode', 'discrete', 'neither', 0, ''),
 (51, 3, 'production', 'canopy_mode', 'canopy_mode', 'luvisol144-prod-canopy_mode', 'discrete', 'neither', 0, ''),
-(52, 1, 'resilience', 'canopy_mode', 'canopy_mode', 'solapur94-res-canopy_mode', 'discrete', 'neither', 0, ''),
-(53, 2, 'resilience', 'canopy_mode', 'canopy_mode', 'solapur132-res-canopy_mode', 'discrete', 'neither', 0, ''),
-(54, 3, 'resilience', 'canopy_mode', 'canopy_mode', 'luvisol144-res-canopy_mode', 'discrete', 'neither', 0, ''),
+(52, 1, 'stability', 'canopy_mode', 'canopy_mode', 'solapur94-res-canopy_mode', 'discrete', 'neither', 0, ''),
+(53, 2, 'stability', 'canopy_mode', 'canopy_mode', 'solapur132-res-canopy_mode', 'discrete', 'neither', 0, ''),
+(54, 3, 'stability', 'canopy_mode', 'canopy_mode', 'luvisol144-res-canopy_mode', 'discrete', 'neither', 0, ''),
 (55, 1, 'production', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'solapur94-prod-endjuv_average', 'continuous', 'neither', 1, ''),
 (56, 2, 'production', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'solapur132-prod-endjuv_average', 'continuous', 'neither', 1, ''),
 (57, 3, 'production', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'luvisol144-prod-endjuv_average', 'continuous', 'neither', 1, ''),
-(58, 1, 'resilience', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'solapur94-res-endjuv_average', 'continuous', 'neither', 1, ''),
-(59, 2, 'resilience', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'solapur132-res-endjuv_average', 'continuous', 'neither', 1, ''),
-(60, 3, 'resilience', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'luvisol144-res-endjuv_average', 'continuous', 'neither', 1, ''),
+(58, 1, 'stability', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'solapur94-res-endjuv_average', 'continuous', 'neither', 1, ''),
+(59, 2, 'stability', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'solapur132-res-endjuv_average', 'continuous', 'neither', 1, ''),
+(60, 3, 'stability', 'Duration of cultivars (tt_endjuv_to_ini)', 'endjuv_average', 'luvisol144-res-endjuv_average', 'continuous', 'neither', 1, ''),
 (61, 1, 'production', 'Nitrogen fertilization (Urea)', 'urea_average', 'solapur94-prod-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
 (62, 2, 'production', 'Nitrogen fertilization (Urea)', 'urea_average', 'solapur132-prod-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
 (63, 3, 'production', 'Nitrogen fertilization (Urea)', 'urea_average', 'luvisol144-prod-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
-(64, 1, 'resilience', 'Nitrogen fertilization (Urea)', 'urea_average', 'solapur94-res-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
-(65, 2, 'resilience', 'Nitrogen fertilization (Urea)', 'urea_average', 'solapur132-res-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
-(66, 3, 'resilience', 'Nitrogen fertilization (Urea)', 'urea_average', 'luvisol144-res-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
+(64, 1, 'stability', 'Nitrogen fertilization (Urea)', 'urea_average', 'solapur94-res-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
+(65, 2, 'stability', 'Nitrogen fertilization (Urea)', 'urea_average', 'solapur132-res-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
+(66, 3, 'stability', 'Nitrogen fertilization (Urea)', 'urea_average', 'luvisol144-res-urea_average', 'continuous', 'neither', 1, 'kg/ha'),
 (67, 1, 'production', 'Plant density', 'density_average', 'solapur94-prod-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
 (68, 2, 'production', 'Plant density', 'density_average', 'solapur132-prod-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
 (69, 3, 'production', 'Plant density', 'density_average', 'luvisol144-prod-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
-(70, 1, 'resilience', 'Plant density', 'density_average', 'solapur94-res-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
-(71, 2, 'resilience', 'Plant density', 'density_average', 'solapur132-res-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
-(72, 3, 'resilience', 'Plant density', 'density_average', 'luvisol144-res-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
+(70, 1, 'stability', 'Plant density', 'density_average', 'solapur94-res-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
+(71, 2, 'stability', 'Plant density', 'density_average', 'solapur132-res-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
+(72, 3, 'stability', 'Plant density', 'density_average', 'luvisol144-res-density_average', 'continuous', 'neither', 1, 'plants/m^2'),
 (73, 1, 'production', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'solapur94-prod-canopy_average', 'continuous', 'neither', 1, ''),
 (74, 2, 'production', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'solapur132-prod-canopy_average', 'continuous', 'neither', 1, ''),
 (75, 3, 'production', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'luvisol144-prod-canopy_average', 'continuous', 'neither', 1, ''),
-(76, 1, 'resilience', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'solapur94-res-canopy_average', 'continuous', 'neither', 1, ''),
-(77, 2, 'resilience', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'solapur132-res-canopy_average', 'continuous', 'neither', 1, ''),
-(78, 3, 'resilience', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'luvisol144-res-canopy_average', 'continuous', 'neither', 1, ''),
+(76, 1, 'stability', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'solapur94-res-canopy_average', 'continuous', 'neither', 1, ''),
+(77, 2, 'stability', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'solapur132-res-canopy_average', 'continuous', 'neither', 1, ''),
+(78, 3, 'stability', 'Vigour (rate of canopy growth) (power coefficient for TPLA max)', 'canopy_average', 'luvisol144-res-canopy_average', 'continuous', 'neither', 1, ''),
 (79, 1, 'production', 'Sowing window', 'sowing_window', 'solapur94-prod-sowing_window', 'discrete', 'neither', 1, ''),
 (80, 2, 'production', 'Sowing window', 'sowing_window', 'solapur132-prod-sowing_window', 'discrete', 'neither', 1, ''),
 (81, 3, 'production', 'Sowing window', 'sowing_window', 'luvisol144-prod-sowing_window', 'discrete', 'neither', 1, ''),
-(82, 1, 'resilience', 'Sowing window', 'sowing_window', 'solapur94-res-sowing_window', 'discrete', 'neither', 1, ''),
-(83, 2, 'resilience', 'Sowing window', 'sowing_window', 'solapur132-res-sowing_window', 'discrete', 'neither', 1, ''),
-(84, 3, 'resilience', 'Sowing window', 'sowing_window', 'luvisol144-res-sowing_window', 'discrete', 'neither', 1, ''),
+(82, 1, 'stability', 'Sowing window', 'sowing_window', 'solapur94-res-sowing_window', 'discrete', 'neither', 1, ''),
+(83, 2, 'stability', 'Sowing window', 'sowing_window', 'solapur132-res-sowing_window', 'discrete', 'neither', 1, ''),
+(84, 3, 'stability', 'Sowing window', 'sowing_window', 'luvisol144-res-sowing_window', 'discrete', 'neither', 1, ''),
 (85, 1, 'production', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'solapur94-prod-responsiveness', 'discrete', 'neither', 1, ''),
 (86, 2, 'production', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'solapur132-prod-responsiveness', 'discrete', 'neither', 1, ''),
 (87, 3, 'production', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'luvisol144-prod-responsiveness', 'discrete', 'neither', 1, ''),
-(88, 1, 'resilience', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'solapur94-res-responsiveness', 'discrete', 'neither', 1, ''),
-(89, 2, 'resilience', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'solapur132-res-responsiveness', 'discrete', 'neither', 1, ''),
-(90, 3, 'resilience', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'luvisol144-res-responsiveness', 'discrete', 'neither', 1, '');
+(88, 1, 'stability', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'solapur94-res-responsiveness', 'discrete', 'neither', 1, ''),
+(89, 2, 'stability', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'solapur132-res-responsiveness', 'discrete', 'neither', 1, ''),
+(90, 3, 'stability', 'Transpiration responsiveness (Capacity of canopy to limit transpiration in high VPD)', 'responsiveness', 'luvisol144-res-responsiveness', 'discrete', 'neither', 1, '');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `soil`
+-- Table structure for table `soil`
 --
 
 CREATE TABLE `soil` (
@@ -150,7 +150,7 @@ CREATE TABLE `soil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Vypisuji data pro tabulku `soil`
+-- Dumping data for table `soil`
 --
 
 INSERT INTO `soil` (`id`, `name`, `label`) VALUES
@@ -161,7 +161,7 @@ INSERT INTO `soil` (`id`, `name`, `label`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `square`
+-- Table structure for table `square`
 --
 
 CREATE TABLE `square` (
@@ -181,7 +181,7 @@ CREATE TABLE `square` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Vypisuji data pro tabulku `square`
+-- Dumping data for table `square`
 --
 
 INSERT INTO `square` (`id`, `east`, `west`, `north`, `south`, `insi`, `lat`, `lng`, `elev`, `tav`, `amp`, `refht`, `wndht`) VALUES
@@ -500,7 +500,7 @@ INSERT INTO `square` (`id`, `east`, `west`, `north`, `south`, `insi`, `lat`, `ln
 -- --------------------------------------------------------
 
 --
--- Struktura tabulky `value`
+-- Table structure for table `value`
 --
 
 CREATE TABLE `value` (
@@ -511,7 +511,7 @@ CREATE TABLE `value` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Vypisuji data pro tabulku `value`
+-- Dumping data for table `value`
 --
 
 INSERT INTO `value` (`map_id`, `square_id`, `value`, `simulation`) VALUES
@@ -56533,64 +56533,64 @@ INSERT INTO `value` (`map_id`, `square_id`, `value`, `simulation`) VALUES
 (90, '158_513', '0.95', 'M35-1');
 
 --
--- Klíče pro exportované tabulky
+-- Indexes for dumped tables
 --
 
 --
--- Klíče pro tabulku `map`
+-- Indexes for table `map`
 --
 ALTER TABLE `map`
   ADD PRIMARY KEY (`id`),
   ADD KEY `map_soil_id_fk` (`soil`);
 
 --
--- Klíče pro tabulku `soil`
+-- Indexes for table `soil`
 --
 ALTER TABLE `soil`
   ADD PRIMARY KEY (`id`);
 
 --
--- Klíče pro tabulku `square`
+-- Indexes for table `square`
 --
 ALTER TABLE `square`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `square_id_uindex` (`id`);
 
 --
--- Klíče pro tabulku `value`
+-- Indexes for table `value`
 --
 ALTER TABLE `value`
   ADD UNIQUE KEY `value_map_id_square_id_simulation_uindex` (`map_id`,`square_id`,`simulation`),
   ADD KEY `value_square_id_fk` (`square_id`);
 
 --
--- AUTO_INCREMENT pro tabulky
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pro tabulku `map`
+-- AUTO_INCREMENT for table `map`
 --
 ALTER TABLE `map`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
--- AUTO_INCREMENT pro tabulku `soil`
+-- AUTO_INCREMENT for table `soil`
 --
 ALTER TABLE `soil`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Omezení pro exportované tabulky
+-- Constraints for dumped tables
 --
 
 --
--- Omezení pro tabulku `map`
+-- Constraints for table `map`
 --
 ALTER TABLE `map`
   ADD CONSTRAINT `map_soil_id_fk` FOREIGN KEY (`soil`) REFERENCES `soil` (`id`) ON UPDATE CASCADE;
 
 --
--- Omezení pro tabulku `value`
+-- Constraints for table `value`
 --
 ALTER TABLE `value`
   ADD CONSTRAINT `value_map_id_fk` FOREIGN KEY (`map_id`) REFERENCES `map` (`id`) ON UPDATE CASCADE,
