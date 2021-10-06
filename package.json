@@ -19,7 +19,6 @@
     "eject": "react-scripts eject",
     "upload-api": "php .deployment/deploy.phar .deployment/ls40.ini --section=api",
     "upload": "php .deployment/deploy.phar .deployment/ls40.ini --section=react"
-
   },
   "eslintConfig": {
     "extends": "react-app"

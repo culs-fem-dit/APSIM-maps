@@ -16,12 +16,12 @@ const Map = ({
   onListChange,
   sowingDates,
   onSowingDatesChange,
-  onHideChange
+  onHideChange,
 }) => {
   return (
     <StyledRenderMap>
       <RenderMap
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDOcXMQ7_UZ2wYjyM-R5F1Sx3oqv2XUaGg`}
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDaJ7RuqsSyKeGy1RjN6ktzfc3iCFVVD7s`}
         loadingElement={<StyledRenderMap />}
         containerElement={<StyledGoogleMap />}
         mapElement={<div style={{ height: `100%` }} />}
